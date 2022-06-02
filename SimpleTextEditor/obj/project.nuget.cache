@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "s9I0suQhquF3Qe35YhV/eC8xthouC6ze6m8myUyDrQDUXm9p6jjIOBHem+Lrh1S3UUn9+DXFY6z50XBxwJsWEg==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\SimpleTextEditor\\SimpleTextEditor\\SimpleTextEditor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\extended.wpf.toolkit\\4.3.0\\extended.wpf.toolkit.4.3.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用 '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' 而非專案目標架構 'net6.0-windows7.0' 還原了套件 'Extended.Wpf.Toolkit 4.3.0'。此套件與您的專案並非完全相容。",
+      "libraryId": "Extended.Wpf.Toolkit",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}

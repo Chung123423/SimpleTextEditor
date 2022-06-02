@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bold.png" />
+    <None Remove="Images\bold.png" />
+    <None Remove="Images\center-align.png" />
+    <None Remove="Images\italics.png" />
+    <None Remove="Images\left-align.png" />
+    <None Remove="Images\open-file.png" />
+    <None Remove="Images\right-align.png" />
+    <None Remove="Images\save.png" />
+    <None Remove="Images\underline.png" />
+    <None Remove="italics.png" />
+    <None Remove="underline.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\bold.png" />
+    <Resource Include="Images\center-align.png" />
+    <Resource Include="Images\italics.png" />
+    <Resource Include="Images\left-align.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\open-file.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\right-align.png" />
+    <Resource Include="Images\save.png" />
+    <Resource Include="Images\underline.png" />
+  </ItemGroup>
+
+</Project>

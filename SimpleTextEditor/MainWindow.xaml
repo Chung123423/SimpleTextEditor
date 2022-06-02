@@ -1,0 +1,57 @@
+﻿<Window x:Class="SimpleTextEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleTextEditor"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Click="Open_File">
+                <Image Source="/Images/open-file.png" Width="24" Height="24"/>
+            </Button>
+            <Button Click="Save_File">
+                <Image Source="/Images/save.png" Width="20" Height="20"/>
+            </Button>
+            <Separator />
+            <ToggleButton Name="btnBold" Command="EditingCommands.ToggleBold">
+                <Image Source="/Images/bold.png" Width="14" Height="14" />
+            </ToggleButton>
+            <ToggleButton Name="btnItalic" Command="EditingCommands.ToggleItalic">
+                <Image Source="/Images/italics.png" Width="14" Height="14" />
+            </ToggleButton>
+            <ToggleButton Name="btnUnderline" Command="EditingCommands.ToggleUnderline">
+                <Image Source="/Images/underline.png" Width="14" Height="14" />
+            </ToggleButton>
+            <Separator />
+            <ToggleButton Name="btnAlignLeft" Command="EditingCommands.AlignLeft" Click="AlignmentButtonClickHandler">
+                <Image Source="/Images/left-align.png" Width="18" Height="18" />
+            </ToggleButton>
+            <ToggleButton Name="btnAlignCenter" Command="EditingCommands.AlignCenter" Click="AlignmentButtonClickHandler">
+                <Image Source="/Images/center-align.png" Width="18" Height="18" />
+            </ToggleButton>
+            <ToggleButton Name="btnAlignRight" Command="EditingCommands.AlignRight" Click="AlignmentButtonClickHandler">
+                <Image Source="/Images/right-align.png" Width="18" Height="18" />
+            </ToggleButton>
+            <Separator />
+            <ComboBox Name="cmbFontFamily" Width="150" SelectionChanged="SelectionChanged_fontFamily"></ComboBox>
+            <ComboBox Name="cmbFontSize" Width="50" IsEditable="True" TextBoxBase.TextChanged="SelectionChange_fontSize"></ComboBox>
+            <xctk:ColorPicker Width="80" Height="22" Name="colorPicker" SelectedColorChanged="colorPicker_SelectedColorChanged"></xctk:ColorPicker>
+        </ToolBar>
+        <RichTextBox Name="textEditor" SelectionChanged="RctSelectionChanged">
+            <RichTextBox.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0" />
+                </Style>
+            </RichTextBox.Resources>
+        </RichTextBox>
+
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Name="lblCursorPosition" />
+            </StatusBarItem>
+        </StatusBar>
+    </DockPanel>
+</Window>
